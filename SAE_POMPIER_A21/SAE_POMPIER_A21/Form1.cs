@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace SAE_POMPIER_A21
 {
@@ -15,6 +17,12 @@ namespace SAE_POMPIER_A21
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Connexion.Connec.Open();
+
         }
     }
 }
