@@ -1,0 +1,15 @@
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\SAE_POMPIER_A21.exe.config
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\SAE_POMPIER_A21.exe
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\SAE_POMPIER_A21.pdb
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\System.Data.SQLite.dll
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\User_Control_Missions_TDB.dll
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\System.Data.SQLite.xml
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\User_Control_Missions_TDB.pdb
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.csproj.AssemblyReference.cache
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.Form1.resources
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.Properties.Resources.resources
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.csproj.GenerateResource.cache
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.csproj.CoreCompileInputs.cache
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMP.5B73477A.Up2Date
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.exe
+C:\Users\Yvann\Desktop\SAE_A21\SAE_POMPIER_A21\SAE_POMPIER_A21\obj\Debug\SAE_POMPIER_A21.pdb
