@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel_1 = new System.Windows.Forms.Panel();
+            this.picBox = new System.Windows.Forms.PictureBox();
+            this.pnl_bordure = new System.Windows.Forms.Panel();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblCaserne = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -37,7 +39,6 @@
             this.lblMissionId = new System.Windows.Forms.Label();
             this.btn_pdf = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
-            this.picBox = new System.Windows.Forms.PictureBox();
             this.panel_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
@@ -59,60 +60,87 @@
             this.panel_1.TabIndex = 0;
             this.panel_1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_1_Paint);
             // 
+            // picBox
+            // 
+            this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox.Location = new System.Drawing.Point(13, 11);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(63, 63);
+            this.picBox.TabIndex = 6;
+            this.picBox.TabStop = false;
+            // 
+            // pnl_bordure
+            // 
+            this.pnl_bordure.BackColor = System.Drawing.Color.Red;
+            this.pnl_bordure.Location = new System.Drawing.Point(92, 232);
+            this.pnl_bordure.Name = "pnl_bordure";
+            this.pnl_bordure.Size = new System.Drawing.Size(185, 10);
+            this.pnl_bordure.TabIndex = 7;
+            this.pnl_bordure.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_bordure_Paint);
+            // 
             // lblDescription
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(89, 95);
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(10, 84);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(44, 16);
+            this.lblDescription.Size = new System.Drawing.Size(337, 33);
             this.lblDescription.TabIndex = 5;
             this.lblDescription.Text = "label1";
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // lblCaserne
             // 
-            this.lblCaserne.AutoSize = true;
-            this.lblCaserne.Location = new System.Drawing.Point(32, 191);
+            this.lblCaserne.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaserne.Location = new System.Drawing.Point(10, 189);
             this.lblCaserne.Name = "lblCaserne";
-            this.lblCaserne.Size = new System.Drawing.Size(44, 16);
+            this.lblCaserne.Size = new System.Drawing.Size(190, 24);
             this.lblCaserne.TabIndex = 4;
             this.lblCaserne.Text = "label1";
+            this.lblCaserne.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblCaserne.Click += new System.EventHandler(this.lblCaserne_Click);
             // 
             // lblDate
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(272, 154);
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblDate.Location = new System.Drawing.Point(206, 173);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(44, 16);
+            this.lblDate.Size = new System.Drawing.Size(144, 40);
             this.lblDate.TabIndex = 3;
             this.lblDate.Text = "label1";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblAdresse
             // 
-            this.lblAdresse.AutoSize = true;
-            this.lblAdresse.Location = new System.Drawing.Point(89, 154);
+            this.lblAdresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdresse.Location = new System.Drawing.Point(10, 128);
             this.lblAdresse.Name = "lblAdresse";
-            this.lblAdresse.Size = new System.Drawing.Size(44, 16);
+            this.lblAdresse.Size = new System.Drawing.Size(337, 33);
             this.lblAdresse.TabIndex = 2;
             this.lblAdresse.Text = "label1";
+            this.lblAdresse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAdresse.Click += new System.EventHandler(this.lblAdresse_Click);
             // 
             // lblSinistre
             // 
-            this.lblSinistre.AutoSize = true;
-            this.lblSinistre.Location = new System.Drawing.Point(89, 32);
+            this.lblSinistre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinistre.Location = new System.Drawing.Point(86, 32);
             this.lblSinistre.Name = "lblSinistre";
-            this.lblSinistre.Size = new System.Drawing.Size(44, 16);
+            this.lblSinistre.Size = new System.Drawing.Size(169, 27);
             this.lblSinistre.TabIndex = 1;
             this.lblSinistre.Text = "label1";
+            this.lblSinistre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMissionId
             // 
-            this.lblMissionId.AutoSize = true;
-            this.lblMissionId.Location = new System.Drawing.Point(272, 12);
+            this.lblMissionId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMissionId.Location = new System.Drawing.Point(257, 21);
             this.lblMissionId.Name = "lblMissionId";
-            this.lblMissionId.Size = new System.Drawing.Size(44, 16);
+            this.lblMissionId.Size = new System.Drawing.Size(93, 24);
             this.lblMissionId.TabIndex = 0;
             this.lblMissionId.Text = "label1";
+            this.lblMissionId.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btn_pdf
             // 
@@ -134,28 +162,21 @@
             this.btn_close.TabIndex = 2;
             this.btn_close.UseVisualStyleBackColor = false;
             // 
-            // picBox
-            // 
-            this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox.Location = new System.Drawing.Point(13, 21);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(63, 50);
-            this.picBox.TabIndex = 6;
-            this.picBox.TabStop = false;
-            // 
             // Missions_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.pnl_bordure);
             this.Controls.Add(this.btn_pdf);
             this.Controls.Add(this.panel_1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Missions_UC";
-            this.Size = new System.Drawing.Size(452, 228);
+            this.Size = new System.Drawing.Size(452, 249);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panel_1.ResumeLayout(false);
-            this.panel_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,5 +194,6 @@
         private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.Button btn_pdf;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Panel pnl_bordure;
     }
 }

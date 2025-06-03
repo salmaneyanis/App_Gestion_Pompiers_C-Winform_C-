@@ -127,17 +127,44 @@
   <data name="cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eboulement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\eboulement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\faune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FIGER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\FIGER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\foret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="incendie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\incendie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="industrielle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\industrielle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="leave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\leave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\mer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="non_urgent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\non_urgent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\plan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stats" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\stats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,5 +174,14 @@
   </data>
   <data name="target__" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bin\Debug\Images\target.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="urgent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\urgent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="valid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\valid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="voiture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\voiture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

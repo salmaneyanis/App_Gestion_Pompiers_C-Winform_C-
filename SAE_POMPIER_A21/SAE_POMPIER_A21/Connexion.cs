@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SAE_POMPIER_A21
 {
@@ -26,8 +28,9 @@ namespace SAE_POMPIER_A21
                 {
                     try
                     {
-						// Chaîne de connexion à votre base de données
-						string chaine = @"Data Source = ..\..\..\SDIS67.db";
+                        // Chaîne de connexion à votre base de données
+                        //MessageBox.Show("Base utilisée : " + Path.GetFullPath(@"..\..\..\SDIS67.db"));
+                        string chaine = @"Data Source = ..\..\..\SDIS67.db";
                         connec = new SQLiteConnection(chaine);
                         connec.Open();
                     }

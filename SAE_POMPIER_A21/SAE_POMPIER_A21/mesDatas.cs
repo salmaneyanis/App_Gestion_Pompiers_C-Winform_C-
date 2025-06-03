@@ -14,5 +14,40 @@ namespace SAE_POMPIER_A21
      
         public static DataSet DsGlobal { get {  return MesDatas.dsGlobal; } }
 
+        public static void ChargerMissions()
+        {
+            using (var cmd = new SQLiteCommand("SELECT * FROM Mission", Connexion.Connec))
+            {
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    MesDatas.DsGlobal.Tables.Clear();
+                    adapter.Fill(MesDatas.DsGlobal, "Mission");
+                }
+            }
+        }
+
+        public static void ChargerSinistre()
+        {
+            using (var cmd = new SQLiteCommand("SELECT * FROM NatureSinistre", Connexion.Connec))
+            {
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    MesDatas.DsGlobal.Tables.Clear();
+                    adapter.Fill(MesDatas.DsGlobal, "NatureSinistre");
+                }
+            }
+        }
+
+        public static void ChargerCaserne()
+        {
+            using (var cmd = new SQLiteCommand("SELECT * FROM Caserne", Connexion.Connec))
+            {
+                using (var adapter = new SQLiteDataAdapter(cmd))
+                {
+                    MesDatas.DsGlobal.Tables.Clear();
+                    adapter.Fill(MesDatas.DsGlobal, "Caserne");
+                }
+            }
+        }
     }
 }

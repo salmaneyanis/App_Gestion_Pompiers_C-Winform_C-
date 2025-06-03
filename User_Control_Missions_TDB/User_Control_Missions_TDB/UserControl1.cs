@@ -31,7 +31,7 @@ namespace User_Control_Missions_TDB
 
         public void SetButtonIcons()
         {
-            btn_close.Image = ResizeImage(Resource1.cross, btn_close.Width - 10, btn_close.Height - 10);
+            btn_close.Image = ResizeImage(Resource1.folder, btn_close.Width - 10, btn_close.Height - 10);
             btn_close.ImageAlign = ContentAlignment.MiddleCenter;
             btn_close.BackgroundImageLayout = ImageLayout.Zoom;
 
@@ -65,9 +65,12 @@ namespace User_Control_Missions_TDB
             CustomizeButton(btn_pdf);
             panel_1.Paint += PanelMain_Paint;
             SetButtonIcons();
+
+            btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            btn_pdf.Cursor = System.Windows.Forms.Cursors.Hand;
         }
 
-        public Missions_UC(int id, string date_depart, string date_retour, string motif, string adresse, string cp, string ville, int terminee, string compteRendu, int natureSinistre,string sinistre, string caserne)
+        public Missions_UC(int id, string date_depart, string date_retour, string motif, string adresse, string cp, string ville, int terminee, string compteRendu, int natureSinistre, string sinistre, string caserne)
         {
             InitializeComponent();
             SetRoundedRegion(20); // 20 = rayon d’arrondi, ajustez selon vos besoins
@@ -105,27 +108,60 @@ namespace User_Control_Missions_TDB
                     lblAdresse.Text = adresse + " " + ville;
                 }
             }
-            lblCaserne.Text = caserne;
+            lblCaserne.Text = "Caserne : " + caserne;
             if (date_retour != null)
             {
-                lblDate.Text = date_depart + " - " + date_retour;
+                lblDate.Text = "Du " + date_depart + "\n au " + date_retour;
             }
             else
             {
-                lblDate.Text = date_depart + " - ";
+                lblDate.Text = "Du " + date_depart + "\n - ";
 
             }
 
-            lblMissionId.Text = id.ToString();
+            lblMissionId.Text = "Mission n° " + id.ToString();
             lblSinistre.Text = sinistre;
-            lblDescription.Text = motif;
+            lblDescription.Text = "->" + " " + motif;
 
-            if (terminee == 0)
+            if (terminee == 1)
             {
-                picBox.Image = Image.FromFile("Images/valid.png");
+                btn_close.Visible = false;
+                pnl_bordure.BackColor = Color.Green;
             }
-
+            switch (natureSinistre)
+            {
+                case 1:
+                    picBox.BackgroundImage = ResizeImage(Resource1.urgent, picBox.Width, picBox.Height);
+                    break;
+                case 2:
+                    picBox.BackgroundImage = ResizeImage(Resource1.voiture, picBox.Width, picBox.Height);
+                    break;
+                case 3:
+                    picBox.BackgroundImage = ResizeImage(Resource1.incendie, picBox.Width, picBox.Height);
+                    break;
+                case 4:
+                    picBox.BackgroundImage = ResizeImage(Resource1.industrielle, picBox.Width, picBox.Height);
+                    break;
+                case 5:
+                    picBox.BackgroundImage = ResizeImage(Resource1.foret, picBox.Width, picBox.Height);
+                    break;
+                case 6:
+                    picBox.BackgroundImage = ResizeImage(Resource1.faune, picBox.Width, picBox.Height);
+                    break;
+                case 7:
+                    picBox.BackgroundImage = ResizeImage(Resource1.plan, picBox.Width, picBox.Height);
+                    break;
+                case 8:
+                    picBox.BackgroundImage = ResizeImage(Resource1.mer, picBox.Width, picBox.Height);
+                    break;
+                case 9:
+                    picBox.BackgroundImage = ResizeImage(Resource1.eboulement, picBox.Width, picBox.Height);
+                    break;
+                case 10:
+                    picBox.BackgroundImage = ResizeImage(Resource1.non_urgent, picBox.Width, picBox.Height);
+                    break;
             }
+        }
 
 
         private void CustomizeButton(Button button)
@@ -249,6 +285,21 @@ namespace User_Control_Missions_TDB
         }
 
         private void panel_1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblCaserne_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl_bordure_Paint(object sender, PaintEventArgs e)
         {
 
         }

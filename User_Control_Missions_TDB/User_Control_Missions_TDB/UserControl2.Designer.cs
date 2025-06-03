@@ -44,6 +44,7 @@
             // flp
             // 
             this.flp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp.CausesValidation = false;
             this.flp.Controls.Add(this.btn_dash);
             this.flp.Controls.Add(this.btn_missions);
             this.flp.Controls.Add(this.btn_engins);
@@ -55,16 +56,16 @@
             this.flp.Location = new System.Drawing.Point(0, 0);
             this.flp.Margin = new System.Windows.Forms.Padding(0);
             this.flp.Name = "flp";
-            this.flp.Size = new System.Drawing.Size(227, 1060);
+            this.flp.Size = new System.Drawing.Size(227, 1000);
             this.flp.TabIndex = 8;
             // 
             // btn_dash
             // 
             this.btn_dash.AutoEllipsis = true;
-            this.btn_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_dash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_dash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dash.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dash.Image = global::User_Control_Missions_TDB.Resource1.home;
             this.btn_dash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dash.Location = new System.Drawing.Point(0, 0);
@@ -75,10 +76,11 @@
             this.btn_dash.Text = "Tableau de bord";
             this.btn_dash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dash.UseVisualStyleBackColor = false;
+            this.btn_dash.Click += new System.EventHandler(this.btn_dash_Click);
             // 
             // btn_missions
             // 
-            this.btn_missions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_missions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_missions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_missions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_missions.Image = ((System.Drawing.Image)(resources.GetObject("btn_missions.Image")));
@@ -94,7 +96,7 @@
             // 
             // btn_engins
             // 
-            this.btn_engins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_engins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_engins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_engins.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_engins.Image = ((System.Drawing.Image)(resources.GetObject("btn_engins.Image")));
@@ -110,7 +112,7 @@
             // 
             // btn_personnel
             // 
-            this.btn_personnel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_personnel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_personnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_personnel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_personnel.Image = ((System.Drawing.Image)(resources.GetObject("btn_personnel.Image")));
@@ -127,7 +129,7 @@
             // 
             // btn_stats
             // 
-            this.btn_stats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_stats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stats.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stats.Image = global::User_Control_Missions_TDB.Resource1.stats;
@@ -147,23 +149,23 @@
             this.pic.BackgroundImage = global::User_Control_Missions_TDB.Resource1.FIGER;
             this.pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic.Location = new System.Drawing.Point(0, 525);
-            this.pic.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pic.Margin = new System.Windows.Forms.Padding(0);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(226, 402);
+            this.pic.Size = new System.Drawing.Size(226, 352);
             this.pic.TabIndex = 10;
             this.pic.TabStop = false;
             // 
             // btn_quitter
             // 
-            this.btn_quitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(23)))));
+            this.btn_quitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.btn_quitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_quitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quitter.Image = global::User_Control_Missions_TDB.Resource1.leave;
             this.btn_quitter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_quitter.Location = new System.Drawing.Point(0, 927);
+            this.btn_quitter.Location = new System.Drawing.Point(0, 877);
             this.btn_quitter.Margin = new System.Windows.Forms.Padding(0);
             this.btn_quitter.Name = "btn_quitter";
-            this.btn_quitter.Size = new System.Drawing.Size(225, 132);
+            this.btn_quitter.Size = new System.Drawing.Size(225, 122);
             this.btn_quitter.TabIndex = 7;
             this.btn_quitter.Text = "Quitter";
             this.btn_quitter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flp);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(227, 1060);
+            this.Size = new System.Drawing.Size(227, 1000);
             this.flp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);

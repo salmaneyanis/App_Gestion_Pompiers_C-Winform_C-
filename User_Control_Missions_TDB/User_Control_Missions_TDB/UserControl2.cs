@@ -13,42 +13,66 @@ namespace User_Control_Missions_TDB
     public partial class UserControl2 : UserControl
     {
         public UserControl2()
-        {
+        {   
             InitializeComponent();
+            flp.AutoSize = true;
             int iconSize = Math.Min(btn_dash.Height - 8, 32);
             btn_dash.Image = new Bitmap(Resource1.home, new Size(iconSize, iconSize));
             btn_dash.Padding = new Padding(8, 0, 8, 0);
             btn_dash.FlatStyle  = FlatStyle.Flat;
+            btn_dash.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_dash.Cursor = System.Windows.Forms.Cursors.Hand;
 
             btn_engins.Image = new Bitmap(btn_engins.Image, new Size(iconSize, iconSize));
             btn_engins.Padding = new Padding(8, 0, 8, 0);
             btn_engins.FlatStyle = FlatStyle.Flat;
+            btn_engins.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_engins.Cursor = System.Windows.Forms.Cursors.Hand;
 
             btn_missions.Image = new Bitmap(btn_missions.Image, new Size(iconSize, iconSize));
             btn_missions.Padding = new Padding(8, 0, 8, 0);
             btn_missions.FlatStyle = FlatStyle.Flat;
+            btn_missions.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_missions.Cursor = System.Windows.Forms.Cursors.Hand;
 
-            
+
             btn_personnel.Padding = new Padding(8, 0, 8, 0);
             btn_personnel.FlatStyle = FlatStyle.Flat;
             btn_personnel.Image = new Bitmap(btn_personnel.Image, new Size(iconSize, iconSize));
+            btn_personnel.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_personnel.Cursor = System.Windows.Forms.Cursors.Hand;
 
             btn_quitter.Image = new Bitmap(btn_quitter.Image, new Size(iconSize, iconSize));
             btn_quitter.Padding = new Padding(8, 0, 8, 0);
             btn_quitter.FlatStyle = FlatStyle.Flat;
+            btn_quitter.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_quitter.Cursor = System.Windows.Forms.Cursors.Hand;
 
             btn_stats.Image = new Bitmap(btn_stats.Image, new Size(iconSize, iconSize));
             btn_stats.Padding = new Padding(8, 0, 8, 0);
             btn_stats.FlatStyle = FlatStyle.Flat;
+            btn_stats.FlatAppearance.MouseOverBackColor = Color.FromArgb(184, 222, 239);
+            btn_stats.Cursor = System.Windows.Forms.Cursors.Hand;
 
+            btn_dash.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
+            btn_engins.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
+            btn_missions.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
+            btn_personnel.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
+            btn_quitter.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
+            btn_stats.FlatAppearance.MouseDownBackColor = Color.FromArgb(144, 243, 255);
         }
 
         private void btn_quitter_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void btn_personnel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dash_Click(object sender, EventArgs e)
         {
 
         }
