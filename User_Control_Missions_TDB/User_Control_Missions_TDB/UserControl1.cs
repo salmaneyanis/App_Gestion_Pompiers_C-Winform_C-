@@ -10,6 +10,16 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.IO;
+using SAE_POMPIER_A21;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.IO.Image;
+using iText.Layout.Element;
+using iText.IO.Font.Constants;
+using iText.Kernel.Font;
+
+
+
 
 namespace User_Control_Missions_TDB
 {
@@ -17,8 +27,11 @@ namespace User_Control_Missions_TDB
     [ToolboxBitmap(typeof(Missions_UC), "Images/target.ico")]
     public partial class Missions_UC: UserControl
     {
+        private int idMission;
+        public event EventHandler<int> CloturerMissionDemande;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
         private static extern IntPtr CreateRoundRectRgn
       (
           int nLeftRect,     // x-coordinate of upper-left corner
@@ -41,7 +54,7 @@ namespace User_Control_Missions_TDB
         }
 
         // Méthode pour redimensionner l'image
-        private Image ResizeImage(Image img, int width, int height)
+        private System.Drawing.Image ResizeImage(System.Drawing.Image img, int width, int height)
         {
             Bitmap resized = new Bitmap(width, height);
             using (Graphics g = Graphics.FromImage(resized))
@@ -55,7 +68,7 @@ namespace User_Control_Missions_TDB
         public Missions_UC()
         {
             InitializeComponent();
-            SetRoundedRegion(20); // 20 = rayon d’arrondi, ajustez selon vos besoins
+            SetRoundedRegion(20); // 20 = rayon d’arrondi
             this.BackColor = Color.White;
             this.Padding = new Padding(10);
             this.Margin = new Padding(10);
@@ -73,7 +86,8 @@ namespace User_Control_Missions_TDB
         public Missions_UC(int id, string date_depart, string date_retour, string motif, string adresse, string cp, string ville, int terminee, string compteRendu, int natureSinistre, string sinistre, string caserne)
         {
             InitializeComponent();
-            SetRoundedRegion(20); // 20 = rayon d’arrondi, ajustez selon vos besoins
+            this.idMission = id;
+            SetRoundedRegion(20);
             this.BackColor = Color.White;
             this.Padding = new Padding(10);
             this.Margin = new Padding(10);
@@ -108,7 +122,7 @@ namespace User_Control_Missions_TDB
                     lblAdresse.Text = adresse + " " + ville;
                 }
             }
-            lblCaserne.Text = "Caserne : " + caserne;
+            lblCaserne.Text = caserne;
             if (date_retour != null)
             {
                 lblDate.Text = "Du " + date_depart + "\n au " + date_retour;
@@ -171,8 +185,8 @@ namespace User_Control_Missions_TDB
             button.FlatAppearance.BorderSize = 0;
             button.Font = new Font("Arial", 9, FontStyle.Bold);
             button.ForeColor = Color.White;
-            button.Width = 50;
-            button.Height = 50;
+            button.Width = 65;
+            button.Height = 65;
             button.Cursor = Cursors.Hand;
             button.Region = new Region(GetRoundedRectanglePath(button.ClientRectangle, 15));
         }
@@ -234,7 +248,7 @@ namespace User_Control_Missions_TDB
         public string Caserne
         {
             get => lblCaserne.Text;
-            set => lblCaserne.Text = $"Caserne: {value}";
+            set => lblCaserne.Text = $"{value}";
         }
 
         public string Sinistre
@@ -247,7 +261,9 @@ namespace User_Control_Missions_TDB
             get => lblAdresse.Text;
             set => lblAdresse.Text = value;
         }
-        public Image Picture
+
+        public DataSet MonDataSet { get; set; }
+        public System.Drawing.Image Picture
         {
             get => picBox.BackgroundImage;
             set
@@ -302,6 +318,154 @@ namespace User_Control_Missions_TDB
         private void pnl_bordure_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lblSinistre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_pdf_Click(object sender, EventArgs e)
+        {
+            MesDatas.ChargerMobiliser();
+            MesDatas.ChargerPompier();
+            MesDatas.ChargerPartirAvec();
+            MesDatas.ChargerMissions();
+            MesDatas.ChargerHabilitations();
+            MesDatas.ChargerEngins();
+            MesDatas.ChargerETypeEngins();
+            GenererPDFMission(idMission);
+        }
+
+        public void GenererPDFMission(int idMission)
+        {
+            string downloadPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads")) ? "Downloads" : "Téléchargements"
+            );
+
+            string nomFichier = Path.Combine(downloadPath, $"Mission_{idMission}.pdf");
+
+            using (PdfWriter writer = new PdfWriter(nomFichier))
+            using (PdfDocument pdf = new PdfDocument(writer))
+            using (Document document = new Document(pdf))
+            {
+                // --- POLICES ---
+                PdfFont fontNormal = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+                PdfFont fontBold = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
+                PdfFont fontItalic = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_OBLIQUE);
+
+                // --- LOGO ---
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Resource1.FIGER.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    ImageData imageData = ImageDataFactory.Create(ms.ToArray());
+                    var logo = new iText.Layout.Element.Image(imageData).ScaleToFit(100, 100);
+                    document.Add(logo);
+                }
+
+                // --- DONNÉES MISSION ---
+                var dtMission = MesDatas.DsGlobal.Tables["Mission"];
+                if (dtMission == null)
+                {
+                    MessageBox.Show("La table 'Mission' est introuvable.");
+                    return;
+                }
+
+                var mission = dtMission.Select($"id = {idMission}").FirstOrDefault();
+                if (mission == null)
+                {
+                    MessageBox.Show("Mission introuvable.");
+                    return;
+                }
+
+                // Titre principal
+                document.Add(new Paragraph($"Rapport de la mission n°{idMission}").SetFont(fontBold).SetFontSize(20).SetMarginBottom(10));
+                document.Add(new Paragraph($"Départ : {mission["dateHeureDepart"]}").SetFont(fontNormal));
+                document.Add(new Paragraph($"Retour : {(mission["dateHeureRetour"] == DBNull.Value ? "En cours" : mission["dateHeureRetour"])}").SetFont(fontNormal));
+                document.Add(new Paragraph($"Motif : {mission["motifAppel"]}").SetFont(fontNormal));
+                document.Add(new Paragraph($"Adresse : {mission["adresse"]}, {mission["cp"]} {mission["ville"]}").SetFont(fontNormal));
+                document.Add(new Paragraph($"Compte-rendu : {mission["compteRendu"]}").SetFont(fontNormal));
+                document.Add(new Paragraph("------------------------------------------------------------------------------------"));
+                document.Add(new Paragraph("\n"));
+
+                // --- POMPIERS MOBILISÉS ---
+                var dtMobiliser = MesDatas.DsGlobal.Tables["Mobiliser"];
+                var dtPompiers = MesDatas.DsGlobal.Tables["Pompier"];
+                var dtHabilitations = MesDatas.DsGlobal.Tables["Habilitation"];
+
+                document.Add(new Paragraph("Pompiers mobilisés :").SetFont(fontBold).SetFontSize(15));
+
+                var mobilises = dtMobiliser?.Select($"idMission = {idMission}");
+                if (mobilises != null)
+                {
+                    foreach (var row in mobilises)
+                    {
+                        var pompier = dtPompiers?.Select($"matricule = {row["matriculePompier"]}").FirstOrDefault();
+                        if (pompier != null)
+                        {
+                            string nomPrenom = $"{pompier["nom"]} {pompier["prenom"]}";
+                            string matricule = pompier["matricule"].ToString();
+                            string idHab = row["idHabilitation"].ToString();
+
+                            var habilitation = dtHabilitations?.Select($"id = {idHab}").FirstOrDefault();
+                            string nomHabilitation = habilitation != null ? habilitation["libelle"].ToString() : $"Habilitation {idHab}";
+
+                            Paragraph pompierParagraph = new Paragraph()
+                                .Add($"- {nomPrenom} (Matricule: {matricule}) - ")
+                                .Add(new Text(nomHabilitation).SetFont(fontItalic));
+                            document.Add(pompierParagraph);
+                        }
+                    }
+                }
+                document.Add(new Paragraph("------------------------------------------------------------------------------------"));
+                document.Add(new Paragraph("\n"));
+
+                // --- ENGIN(S) MOBILISÉ(S) + RÉPARATIONS ---
+                var partirAvec = MesDatas.DsGlobal.Tables["PartirAvec"]?.Select($"idMission = {idMission}");
+                var dtTypes = MesDatas.DsGlobal.Tables["TypeEngin"];
+
+                document.Add(new Paragraph("Engins mobilisés :").SetFont(fontBold).SetFontSize(15));
+
+                if (partirAvec != null)
+                {
+                    foreach (var row in partirAvec)
+                    {
+                        string numero = row["numeroEngin"].ToString();
+                        string codeType = row["codeTypeEngin"].ToString();
+
+                        // Nom du type d'engin
+                        var type = dtTypes?.Select($"code = '{codeType}'").FirstOrDefault();
+                        string nomType = type != null ? type["nom"].ToString() : $"Type {codeType}";
+
+                        string reparations = row["reparationsEventuelles"] == DBNull.Value || string.IsNullOrWhiteSpace(row["reparationsEventuelles"].ToString())
+                            ? "(pas de réparations prévues)"
+                            : row["reparationsEventuelles"].ToString();
+
+                        Paragraph enginParagraph = new Paragraph()
+                            .Add("Engin ")
+                            .Add(new Text(codeType).SetFont(fontBold))
+                            .Add(" n°")
+                            .Add(new Text(numero).SetFont(fontNormal))
+                            .Add(" - ")
+                            .Add(new Text(nomType).SetFont(fontBold))
+                            .Add(" - Réparations éventuelles : ")
+                            .Add(new Text(reparations).SetFont(fontItalic));
+
+                        document.Add(enginParagraph);
+                    }
+                }
+
+                // --- FIN ---
+                document.Add(new Paragraph($"\n\n\nPDF généré le {DateTime.Now:G}").SetFont(fontItalic));
+
+                MessageBox.Show($"PDF généré : {nomFichier}", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            CloturerMissionDemande?.Invoke(this, idMission);
         }
     }
 }

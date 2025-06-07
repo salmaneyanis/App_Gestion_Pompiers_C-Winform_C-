@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flp_uc = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl21 = new User_Control_Missions_TDB.UserControl2();
+            this.chk_encours = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +52,11 @@
             this.flp_uc.AutoScroll = true;
             this.flp_uc.BackColor = System.Drawing.Color.White;
             this.flp_uc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_uc.Location = new System.Drawing.Point(381, 104);
-            this.flp_uc.Margin = new System.Windows.Forms.Padding(10);
+            this.flp_uc.Location = new System.Drawing.Point(391, 103);
+            this.flp_uc.Margin = new System.Windows.Forms.Padding(0);
             this.flp_uc.Name = "flp_uc";
             this.flp_uc.Padding = new System.Windows.Forms.Padding(20);
-            this.flp_uc.Size = new System.Drawing.Size(1481, 825);
+            this.flp_uc.Size = new System.Drawing.Size(1467, 825);
             this.flp_uc.TabIndex = 1;
             // 
             // userControl21
@@ -65,6 +66,18 @@
             this.userControl21.Size = new System.Drawing.Size(227, 1009);
             this.userControl21.TabIndex = 2;
             // 
+            // chk_encours
+            // 
+            this.chk_encours.AutoSize = true;
+            this.chk_encours.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_encours.Location = new System.Drawing.Point(391, 9);
+            this.chk_encours.Name = "chk_encours";
+            this.chk_encours.Size = new System.Drawing.Size(86, 21);
+            this.chk_encours.TabIndex = 3;
+            this.chk_encours.Text = "En cours";
+            this.chk_encours.UseVisualStyleBackColor = true;
+            this.chk_encours.CheckedChanged += new System.EventHandler(this.chk_encours_CheckedChanged);
+            // 
             // Gestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -72,6 +85,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(190)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1924, 962);
+            this.Controls.Add(this.chk_encours);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.flp_uc);
             this.Controls.Add(this.label1);
@@ -88,6 +102,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flp_uc;
         private User_Control_Missions_TDB.UserControl2 userControl21;
+        private System.Windows.Forms.CheckBox chk_encours;
     }
 }
 
