@@ -53,10 +53,11 @@ namespace SAE_POMPIER_A21
                 else
                     chk_encours.BackColor = couleurPressed; // Si coché, reste en couleur pressed
             };
+
         }
 
 
-private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             Charger_FLpanel(sender, e);
         }
@@ -329,5 +330,7 @@ private void Form1_Load(object sender, EventArgs e)
                 Charger_FLpanel(sender, e);
             }
         }
+
+
     }
 }

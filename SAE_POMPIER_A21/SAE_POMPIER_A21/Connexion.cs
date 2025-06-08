@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace SAE_POMPIER_A21
 {
 	// Classe basée sur le pattern Singleton pour s'assurer que la connexion n'est ouverte qu'une seule fois
-    internal class Connexion
+    public class Connexion
     {
 		// Objet Connection
         private static SQLiteConnection connec;
@@ -30,7 +30,7 @@ namespace SAE_POMPIER_A21
                     {
                         // Chaîne de connexion à votre base de données
                         //MessageBox.Show("Base utilisée : " + Path.GetFullPath(@"..\..\..\SDIS67.db"));
-                        string chaine = @"Data Source = ..\..\..\SDIS67.db";
+                        string chaine = $"Data Source={Path.Combine(Application.StartupPath, "SDIS67.db")}";
                         connec = new SQLiteConnection(chaine);
                         connec.Open();
                     }

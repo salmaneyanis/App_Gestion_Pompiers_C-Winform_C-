@@ -12,6 +12,8 @@ namespace User_Control_Missions_TDB
 {
     public partial class UserControl2 : UserControl
     {
+        private Dictionary<string, Form> _formulaires = new Dictionary<string, Form>();
+
         public UserControl2()
         {   
             InitializeComponent();
@@ -64,7 +66,7 @@ namespace User_Control_Missions_TDB
 
         private void btn_quitter_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void btn_personnel_Click(object sender, EventArgs e)
@@ -74,7 +76,39 @@ namespace User_Control_Missions_TDB
 
         private void btn_dash_Click(object sender, EventArgs e)
         {
+            AfficherFormulaire("dash", () => new SAE_POMPIER_A21.Gestion());
+        }
 
+        private void btn_engins_Click(object sender, EventArgs e)
+        {
+            AfficherFormulaire("engins", () => new Volet3.Form1());
+        }
+
+        private void btn_missions_Click(object sender, EventArgs e)
+        {
+            AfficherFormulaire("missions", () => new CreationMission.Form1());
+        }
+
+        private void AfficherFormulaire(string nom, Func<Form> createFunc)
+        {
+            // Masquer tous les formulaires sauf celui demandé
+            foreach (var form in _formulaires.Values)
+            {
+                form.Hide();
+            }
+
+            // S’il n’existe pas, on le crée et on le stocke
+            if (!_formulaires.ContainsKey(nom) || _formulaires[nom].IsDisposed)
+            {
+                Form f = createFunc();
+                _formulaires[nom] = f;
+                f.FormClosed += (s, args) => _formulaires.Remove(nom);
+                f.Show();
+            }
+            else
+            {
+                _formulaires[nom].Show();
+            }
         }
     }
-}  
+}

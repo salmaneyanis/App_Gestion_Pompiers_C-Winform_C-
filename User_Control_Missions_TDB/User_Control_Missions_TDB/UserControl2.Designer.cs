@@ -93,6 +93,7 @@
             this.btn_missions.Text = "Nouvelle mission";
             this.btn_missions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_missions.UseVisualStyleBackColor = false;
+            this.btn_missions.Click += new System.EventHandler(this.btn_missions_Click);
             // 
             // btn_engins
             // 
@@ -109,6 +110,7 @@
             this.btn_engins.Text = "Gestion engins";
             this.btn_engins.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_engins.UseVisualStyleBackColor = false;
+            this.btn_engins.Click += new System.EventHandler(this.btn_engins_Click);
             // 
             // btn_personnel
             // 
