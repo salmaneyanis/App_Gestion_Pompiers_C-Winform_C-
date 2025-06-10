@@ -22,6 +22,12 @@ namespace Volet3
         public Form1()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false; // ⚠️ Obligatoire
+            this.FormClosing += (s, e) =>
+            {
+                e.Cancel = true;  // Empêche la fermeture
+                this.Hide();      // Cache à la place
+            };
             this.WindowState = FormWindowState.Maximized;
 
             button1.Cursor = System.Windows.Forms.Cursors.Hand;

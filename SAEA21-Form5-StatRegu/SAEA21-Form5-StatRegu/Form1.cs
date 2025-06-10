@@ -12,6 +12,12 @@ namespace SAEA21_Form5_StatRegu
         public FrmStatistiques()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false; // ⚠️ Obligatoire
+            this.FormClosing += (s, e) =>
+            {
+                e.Cancel = true;  // Empêche la fermeture
+                this.Hide();      // Cache à la place
+            };
             this.WindowState = FormWindowState.Maximized;
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionDesPompiers));
             this.grpSelectCasernePompier = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnNouveau = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.lblRattachement = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
             this.userControl21 = new User_Control_Missions_TDB.UserControl2();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpSelectCasernePompier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpInformations.SuspendLayout();
@@ -83,7 +85,7 @@
             this.grpSelectCasernePompier.Controls.Add(this.label1);
             this.grpSelectCasernePompier.Controls.Add(this.pictureBox1);
             this.grpSelectCasernePompier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.grpSelectCasernePompier.Location = new System.Drawing.Point(233, 11);
+            this.grpSelectCasernePompier.Location = new System.Drawing.Point(233, 106);
             this.grpSelectCasernePompier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpSelectCasernePompier.Name = "grpSelectCasernePompier";
             this.grpSelectCasernePompier.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,7 +186,7 @@
             this.grpInformations.Controls.Add(this.lblMatricule);
             this.grpInformations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpInformations.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformations.Location = new System.Drawing.Point(612, 11);
+            this.grpInformations.Location = new System.Drawing.Point(612, 106);
             this.grpInformations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpInformations.Name = "grpInformations";
             this.grpInformations.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,7 +201,7 @@
             this.btnConnexion.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnexion.ForeColor = System.Drawing.Color.Black;
             this.btnConnexion.Location = new System.Drawing.Point(1111, 25);
-            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(182, 54);
             this.btnConnexion.TabIndex = 11;
@@ -369,7 +371,7 @@
             this.grpInformationPlus.Controls.Add(this.cmbCaserneRattachement);
             this.grpInformationPlus.Controls.Add(this.lblRattachement);
             this.grpInformationPlus.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformationPlus.Location = new System.Drawing.Point(612, 384);
+            this.grpInformationPlus.Location = new System.Drawing.Point(612, 479);
             this.grpInformationPlus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpInformationPlus.Name = "grpInformationPlus";
             this.grpInformationPlus.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -383,7 +385,7 @@
             // 
             this.chkConge.AutoSize = true;
             this.chkConge.Location = new System.Drawing.Point(1056, 46);
-            this.chkConge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkConge.Margin = new System.Windows.Forms.Padding(4);
             this.chkConge.Name = "chkConge";
             this.chkConge.Size = new System.Drawing.Size(116, 31);
             this.chkConge.TabIndex = 22;
@@ -481,7 +483,7 @@
             this.btnPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(240)))), ((int)(((byte)(227)))));
             this.btnPlus.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.ForeColor = System.Drawing.Color.Black;
-            this.btnPlus.Location = new System.Drawing.Point(1668, 344);
+            this.btnPlus.Location = new System.Drawing.Point(1668, 439);
             this.btnPlus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(244, 40);
@@ -498,17 +500,33 @@
             this.userControl21.Size = new System.Drawing.Size(227, 1000);
             this.userControl21.TabIndex = 20;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 34.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(641, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(885, 71);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Visualisation des pompiers";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmGestionDesPompiers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1924, 962);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.grpInformationPlus);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.grpInformations);
             this.Controls.Add(this.grpSelectCasernePompier);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestionDesPompiers";
             this.Text = "Gestion Des Pompiers";
@@ -524,6 +542,7 @@
             this.grpInformationPlus.ResumeLayout(false);
             this.grpInformationPlus.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -565,6 +584,7 @@
         private System.Windows.Forms.CheckBox chkConge;
         private System.Windows.Forms.Button button2;
         private User_Control_Missions_TDB.UserControl2 userControl21;
+        private System.Windows.Forms.Label label3;
     }
 }
 

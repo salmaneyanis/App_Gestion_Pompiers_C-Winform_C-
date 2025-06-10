@@ -28,6 +28,12 @@ namespace SEAA21_Form4
         public frmGestionDesPompiers()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false; // ⚠️ Obligatoire
+            this.FormClosing += (s, e) =>
+            {
+                e.Cancel = true;  // Empêche la fermeture
+                this.Hide();      // Cache à la place
+            };
             this.WindowState = FormWindowState.Maximized;
 
             btnConnexion.Cursor = System.Windows.Forms.Cursors.Hand;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestion));
             this.label1 = new System.Windows.Forms.Label();
             this.flp_uc = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl21 = new User_Control_Missions_TDB.UserControl2();
@@ -90,8 +91,10 @@
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.flp_uc);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Gestion";
+            this.Text = "Tableau de bord";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

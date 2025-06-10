@@ -18,6 +18,8 @@ namespace SAE_POMPIER_A21
         public Gestion()
         {
             InitializeComponent();
+            this.IsMdiContainer = false; // ⚠️ Doit être false
+            this.ShowInTaskbar = true;   // Seul le main form reste dans la barre des tâches
             var maConnexion = Connexion.Connec;
             this.WindowState = FormWindowState.Maximized;
             chk_encours.Appearance = Appearance.Button;

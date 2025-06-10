@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAE_POMPIER_A21;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,49 +72,67 @@ namespace User_Control_Missions_TDB
 
         private void btn_personnel_Click(object sender, EventArgs e)
         {
-            AfficherFormulaire("personnel", () => new SEAA21_Form4.frmGestionDesPompiers());
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                NavigationManager.AfficherFormulaire(
+                    "personnel",
+                    () => new SEAA21_Form4.frmGestionDesPompiers(),
+                    parentForm
+                );
+            }
         }
 
         private void btn_dash_Click(object sender, EventArgs e)
         {
-            AfficherFormulaire("dash", () => new SAE_POMPIER_A21.Gestion());
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                NavigationManager.AfficherFormulaire(
+                    "dash",
+                    () => new SAE_POMPIER_A21.Gestion(),
+                    parentForm
+                );
+            }
         }
 
         private void btn_engins_Click(object sender, EventArgs e)
         {
-            AfficherFormulaire("engins", () => new Volet3.Form1());
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                NavigationManager.AfficherFormulaire(
+                    "engins",
+                    () => new Volet3.Form1(),
+                    parentForm
+                );
+            }
         }
 
         private void btn_missions_Click(object sender, EventArgs e)
         {
-            AfficherFormulaire("missions", () => new CreationMission.Form1());
-        }
-
-        private void AfficherFormulaire(string nom, Func<Form> createFunc)
-        {
-            // Masquer tous les formulaires sauf celui demandé
-            foreach (var form in _formulaires.Values)
+            var parentForm = this.FindForm();
+            if (parentForm != null)
             {
-                form.Hide();
-            }
-
-            // S’il n’existe pas, on le crée et on le stocke
-            if (!_formulaires.ContainsKey(nom) || _formulaires[nom].IsDisposed)
-            {
-                Form f = createFunc();
-                _formulaires[nom] = f;
-                f.FormClosed += (s, args) => _formulaires.Remove(nom);
-                f.Show();
-            }
-            else
-            {
-                _formulaires[nom].Show();
+                NavigationManager.AfficherFormulaire(
+                    "missions",
+                    () => new CreationMission.Form1(),
+                    parentForm
+                );
             }
         }
 
         private void btn_stats_Click(object sender, EventArgs e)
         {
-            AfficherFormulaire("stats", () => new SAEA21_Form5_StatRegu.FrmStatistiques());
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                NavigationManager.AfficherFormulaire(
+                    "stats",
+                    () => new SAEA21_Form5_StatRegu.FrmStatistiques(),
+                    parentForm
+                );
+            }
         }
     }
 }

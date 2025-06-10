@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStatistiques));
             this.cmbSelectionStat = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpbStat = new System.Windows.Forms.GroupBox();
@@ -35,6 +36,7 @@
             this.grpSelectionCaserne = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.userControl21 = new User_Control_Missions_TDB.UserControl2();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpbStat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -122,15 +124,31 @@
             this.userControl21.TabIndex = 4;
             this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 34.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(770, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1009, 71);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Visualisation des statistiques";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmStatistiques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(190)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1924, 962);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grpbStat);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmStatistiques";
             this.Text = "Statistiques pour le régulateur";
@@ -140,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,6 +171,7 @@
         private System.Windows.Forms.GroupBox grpSelectionCaserne;
         private System.Windows.Forms.PictureBox pictureBox1;
         private User_Control_Missions_TDB.UserControl2 userControl21;
+        private System.Windows.Forms.Label label2;
     }
 }
 

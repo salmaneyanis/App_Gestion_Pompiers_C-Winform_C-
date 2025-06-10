@@ -29,6 +29,12 @@ namespace CreationMission
         public Form1()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false; // ⚠️ Obligatoire
+            this.FormClosing += (s, e) =>
+            {
+                e.Cancel = true;  // Empêche la fermeture
+                this.Hide();      // Cache à la place
+            };
             this.WindowState = FormWindowState.Maximized;
 
 
