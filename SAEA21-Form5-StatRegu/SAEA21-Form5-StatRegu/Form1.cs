@@ -12,6 +12,7 @@ namespace SAEA21_Form5_StatRegu
         public FrmStatistiques()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void FrmStatistiques_Load(object sender, EventArgs e)
@@ -24,6 +25,8 @@ namespace SAEA21_Form5_StatRegu
             cmbSelectionStat.Items.Add("Liste des pompiers par habilitation");
 
             DeselectCaserne();
+
+
 
         }
 
@@ -62,15 +65,12 @@ namespace SAEA21_Form5_StatRegu
         private void SelectCaserne()
         {
             grpSelectionCaserne.Visible = true;
+            GenererRadioButtonsCaserne();
         }
 
         private void DeselectCaserne()
         {
             grpSelectionCaserne.Visible = false;
-            rdbCaserne1.Checked = false;
-            rdbCaserne2.Checked = false;
-            rdbCaserne3.Checked = false;
-            rdbCaserne4.Checked = false;
         }
 
         private void ChargerEnginsLesPlusUtilises(int x)
@@ -208,6 +208,54 @@ namespace SAEA21_Form5_StatRegu
             else if (cmbSelectionStat.SelectedIndex == 1)
             {
                 ChargerCumulUtilisationEngins(x);
+            }
+        }
+
+        private void userControl21_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenererRadioButtonsCaserne()
+        {
+            grpSelectionCaserne.Controls.Clear(); // Supprimer les anciens RadioButtons
+
+            string requete = "SELECT id, nom FROM Caserne ORDER BY id";
+            SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+
+            int top = 20; // Position Y de départ
+            int margin = 25; // Espace entre chaque RadioButton
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    int id = dr.GetInt32(0);
+                    string nom = dr.GetString(1);
+
+                    RadioButton rdb = new RadioButton();
+                    rdb.Text = nom;
+                    rdb.Tag = id;
+                    rdb.Left = 10;      // Position X
+                    rdb.Top = top;      // Position Y
+                    rdb.AutoSize = true;
+                    rdb.CheckedChanged += Rdb_CheckedChanged;
+
+                    grpSelectionCaserne.Controls.Add(rdb);
+
+                    top += margin; // Incrémente la position Y pour le suivant
+                }
+            }
+        }
+
+
+        private void Rdb_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdb = sender as RadioButton;
+            if (rdb != null && rdb.Checked)
+            {
+                int idCaserne = (int)rdb.Tag;
+                ChargerCaserne(idCaserne);
             }
         }
     }

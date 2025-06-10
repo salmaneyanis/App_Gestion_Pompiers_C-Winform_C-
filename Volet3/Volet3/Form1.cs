@@ -24,6 +24,11 @@ namespace Volet3
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
 
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            button4.Cursor = System.Windows.Forms.Cursors.Hand;
+
 
             try
             {
@@ -168,8 +173,8 @@ namespace Volet3
             // Créer un nouveau PictureBox
             pictureBoxEngin = new PictureBox
             {
-                Size = new Size(300, 200),
-                Location = new Point(547, 95),
+                Size = new Size(400, 300),
+                Location = new Point(715, 254),
                 SizeMode = PictureBoxSizeMode.Zoom,
                 BorderStyle = BorderStyle.None
             };
@@ -178,7 +183,7 @@ namespace Volet3
             // Charger l'image correspondante
             try
             {
-                string[] imageFiles = Directory.GetFiles(imageFolderPath, codeTypeEngin + ".*");
+                string[] imageFiles = Directory.GetFiles(imageFolderPath, codeTypeEngin + ".png");
                 if (imageFiles.Length > 0)
                 {
                     using (var bmpTemp = new Bitmap(imageFiles[0]))
@@ -264,6 +269,9 @@ namespace Volet3
 
         private void label6_Click(object sender, EventArgs e) { }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

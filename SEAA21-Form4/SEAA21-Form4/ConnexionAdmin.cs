@@ -20,6 +20,15 @@ namespace SEAA21_Form4
         public FormMDP()
         {
             InitializeComponent();
+
+            btnRetour.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
+
+            btnRetour.FlatStyle = FlatStyle.Flat;
+            btnRetour.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
+
+            btnValider.FlatStyle = FlatStyle.Flat;
+            btnValider.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
         }
 
         public string Nom { get => nom; }

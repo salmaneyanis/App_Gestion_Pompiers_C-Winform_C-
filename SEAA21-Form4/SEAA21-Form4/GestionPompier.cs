@@ -28,11 +28,30 @@ namespace SEAA21_Form4
         public frmGestionDesPompiers()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+
+            btnConnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnMoins.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnNouveau.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+
+            btnConnexion.FlatStyle = FlatStyle.Flat;
+            btnConnexion.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
+
+            btnMoins.FlatStyle = FlatStyle.Flat;
+            btnMoins.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
+
+            btnNouveau.FlatStyle = FlatStyle.Flat;
+            btnNouveau.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
+
+            btnPlus.FlatStyle = FlatStyle.Flat;
+            btnPlus.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
         }
 
         private void frmGestionDesPompiers_Load(object sender, EventArgs e)
         {
             //fill combos
+
 
             string requete = "SELECT COUNT(*) FROM Caserne";
             SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);

@@ -34,6 +34,8 @@ namespace SAE_POMPIER_A21
             Color couleurHover = Color.FromArgb(184, 222, 239);
             Color couleurPressed = Color.FromArgb(144, 243, 255);
 
+            chk_encours.Cursor = System.Windows.Forms.Cursors.Hand;
+
             // Modifie les événements existants pour tenir compte de l'état Checked
             chk_encours.MouseEnter += (s, e) => {
                 chk_encours.BackColor = couleurPressed;

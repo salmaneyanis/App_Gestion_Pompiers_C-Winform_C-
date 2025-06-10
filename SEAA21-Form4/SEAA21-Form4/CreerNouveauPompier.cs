@@ -18,6 +18,15 @@ namespace SEAA21_Form4
         public CreerNouveauPompier()
         {
             InitializeComponent();
+
+            btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
+
+            btnValider.FlatStyle = FlatStyle.Flat;
+            btnValider.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
+
+            btnAnnuler.FlatStyle = FlatStyle.Flat;
+            btnAnnuler.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 253, 255);
         }
 
         private void CreerNouveauPompier_Load(object sender, EventArgs e)

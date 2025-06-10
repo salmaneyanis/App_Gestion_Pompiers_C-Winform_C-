@@ -53,6 +53,14 @@ namespace CreationMission
 
             DateTime dateLancement = DateTime.Now;
             label4.Text = dateLancement.ToString("dd/MM/yyyy HH:mm:ss");
+
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(104, 237, 220);
+
+            button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(104, 237, 140);
         }
 
        
@@ -495,6 +503,21 @@ namespace CreationMission
             }
 
             return true;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

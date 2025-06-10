@@ -404,6 +404,7 @@ namespace User_Control_Missions_TDB
                         var pompier = dtPompiers?.Select($"matricule = {row["matriculePompier"]}").FirstOrDefault();
                         if (pompier != null)
                         {
+                            string grade = pompier["codeGrade"].ToString();
                             string nomPrenom = $"{pompier["nom"]} {pompier["prenom"]}";
                             string matricule = pompier["matricule"].ToString();
                             string idHab = row["idHabilitation"].ToString();
@@ -412,7 +413,7 @@ namespace User_Control_Missions_TDB
                             string nomHabilitation = habilitation != null ? habilitation["libelle"].ToString() : $"Habilitation {idHab}";
 
                             Paragraph pompierParagraph = new Paragraph()
-                                .Add($"- {nomPrenom} (Matricule: {matricule}) - ")
+                                .Add($"- {grade} {nomPrenom} (Matricule: {matricule}) - ")
                                 .Add(new Text(nomHabilitation).SetFont(fontItalic));
                             document.Add(pompierParagraph);
                         }

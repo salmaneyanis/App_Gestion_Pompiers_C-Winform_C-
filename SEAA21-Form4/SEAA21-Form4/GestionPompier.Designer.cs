@@ -63,6 +63,7 @@
             this.cmbCaserneRattachement = new System.Windows.Forms.ComboBox();
             this.lblRattachement = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
+            this.userControl21 = new User_Control_Missions_TDB.UserControl2();
             this.grpSelectCasernePompier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpInformations.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             // grpSelectCasernePompier
             // 
-            this.grpSelectCasernePompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(53)))), ((int)(((byte)(89)))));
+            this.grpSelectCasernePompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(30)))), ((int)(((byte)(228)))));
             this.grpSelectCasernePompier.Controls.Add(this.button2);
             this.grpSelectCasernePompier.Controls.Add(this.btnNouveau);
             this.grpSelectCasernePompier.Controls.Add(this.cmbPompier);
@@ -82,17 +83,20 @@
             this.grpSelectCasernePompier.Controls.Add(this.label1);
             this.grpSelectCasernePompier.Controls.Add(this.pictureBox1);
             this.grpSelectCasernePompier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.grpSelectCasernePompier.Location = new System.Drawing.Point(10, 9);
+            this.grpSelectCasernePompier.Location = new System.Drawing.Point(233, 11);
+            this.grpSelectCasernePompier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpSelectCasernePompier.Name = "grpSelectCasernePompier";
-            this.grpSelectCasernePompier.Size = new System.Drawing.Size(420, 1035);
+            this.grpSelectCasernePompier.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpSelectCasernePompier.Size = new System.Drawing.Size(373, 947);
             this.grpSelectCasernePompier.TabIndex = 0;
             this.grpSelectCasernePompier.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(20, 981);
+            this.button2.Location = new System.Drawing.Point(18, 785);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 37);
+            this.button2.Size = new System.Drawing.Size(83, 30);
             this.button2.TabIndex = 12;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -102,9 +106,10 @@
             // 
             this.btnNouveau.BackgroundImage = global::SEAA21_Form4.Properties.Resources.AjouterPompier;
             this.btnNouveau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNouveau.Location = new System.Drawing.Point(110, 700);
+            this.btnNouveau.Location = new System.Drawing.Point(98, 560);
+            this.btnNouveau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNouveau.Name = "btnNouveau";
-            this.btnNouveau.Size = new System.Drawing.Size(200, 200);
+            this.btnNouveau.Size = new System.Drawing.Size(178, 160);
             this.btnNouveau.TabIndex = 5;
             this.btnNouveau.UseVisualStyleBackColor = true;
             this.btnNouveau.Click += new System.EventHandler(this.btnNouveau_Click);
@@ -112,49 +117,54 @@
             // cmbPompier
             // 
             this.cmbPompier.FormattingEnabled = true;
-            this.cmbPompier.Location = new System.Drawing.Point(30, 325);
+            this.cmbPompier.Location = new System.Drawing.Point(27, 260);
+            this.cmbPompier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPompier.Name = "cmbPompier";
-            this.cmbPompier.Size = new System.Drawing.Size(365, 37);
+            this.cmbPompier.Size = new System.Drawing.Size(325, 33);
             this.cmbPompier.TabIndex = 4;
             this.cmbPompier.SelectedIndexChanged += new System.EventHandler(this.cmbPompier_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(30, 280);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(27, 224);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 32);
+            this.label2.Size = new System.Drawing.Size(321, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "Veuillez séléctionner un pompier :";
             // 
             // cmbChoixCaserne
             // 
             this.cmbChoixCaserne.FormattingEnabled = true;
-            this.cmbChoixCaserne.Location = new System.Drawing.Point(30, 211);
+            this.cmbChoixCaserne.Location = new System.Drawing.Point(27, 169);
+            this.cmbChoixCaserne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbChoixCaserne.Name = "cmbChoixCaserne";
-            this.cmbChoixCaserne.Size = new System.Drawing.Size(365, 37);
+            this.cmbChoixCaserne.Size = new System.Drawing.Size(325, 33);
             this.cmbChoixCaserne.TabIndex = 2;
             this.cmbChoixCaserne.SelectedIndexChanged += new System.EventHandler(this.cmbChoixCaserne_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(30, 169);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(27, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(352, 32);
+            this.label1.Size = new System.Drawing.Size(304, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Veuillez séléctionner la caserne :";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SEAA21_Form4.Properties.Resources.Personne;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -174,22 +184,24 @@
             this.grpInformations.Controls.Add(this.lblMatricule);
             this.grpInformations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpInformations.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformations.Location = new System.Drawing.Point(436, 9);
+            this.grpInformations.Location = new System.Drawing.Point(612, 11);
+            this.grpInformations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpInformations.Name = "grpInformations";
+            this.grpInformations.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpInformations.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grpInformations.Size = new System.Drawing.Size(1169, 411);
+            this.grpInformations.Size = new System.Drawing.Size(1300, 329);
             this.grpInformations.TabIndex = 1;
             this.grpInformations.TabStop = false;
             // 
             // btnConnexion
             // 
-            this.btnConnexion.BackColor = System.Drawing.Color.Gold;
+            this.btnConnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(237)))), ((int)(((byte)(198)))));
             this.btnConnexion.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnexion.ForeColor = System.Drawing.Color.Brown;
-            this.btnConnexion.Location = new System.Drawing.Point(953, 31);
-            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConnexion.ForeColor = System.Drawing.Color.Black;
+            this.btnConnexion.Location = new System.Drawing.Point(1111, 25);
+            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(205, 68);
+            this.btnConnexion.Size = new System.Drawing.Size(182, 54);
             this.btnConnexion.TabIndex = 11;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = false;
@@ -198,9 +210,10 @@
             // pctGrade
             // 
             this.pctGrade.Image = global::SEAA21_Form4.Properties.Resources.SAP;
-            this.pctGrade.Location = new System.Drawing.Point(714, 38);
+            this.pctGrade.Location = new System.Drawing.Point(817, 32);
+            this.pctGrade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pctGrade.Name = "pctGrade";
-            this.pctGrade.Size = new System.Drawing.Size(200, 200);
+            this.pctGrade.Size = new System.Drawing.Size(178, 160);
             this.pctGrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctGrade.TabIndex = 9;
             this.pctGrade.TabStop = false;
@@ -210,9 +223,11 @@
             this.groupBox1.Controls.Add(this.lblBIP);
             this.groupBox1.Controls.Add(this.lblTel);
             this.groupBox1.Controls.Add(this.lblGrade);
-            this.groupBox1.Location = new System.Drawing.Point(6, 280);
+            this.groupBox1.Location = new System.Drawing.Point(5, 224);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1156, 122);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1289, 98);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carrière";
@@ -221,36 +236,36 @@
             // lblBIP
             // 
             this.lblBIP.AutoSize = true;
-            this.lblBIP.Location = new System.Drawing.Point(257, 71);
+            this.lblBIP.Location = new System.Drawing.Point(228, 57);
             this.lblBIP.Name = "lblBIP";
-            this.lblBIP.Size = new System.Drawing.Size(63, 32);
+            this.lblBIP.Size = new System.Drawing.Size(54, 27);
             this.lblBIP.TabIndex = 11;
             this.lblBIP.Text = "BIP :";
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(486, 71);
+            this.lblTel.Location = new System.Drawing.Point(432, 57);
             this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(137, 32);
+            this.lblTel.Size = new System.Drawing.Size(117, 27);
             this.lblTel.TabIndex = 10;
             this.lblTel.Text = "Téléphone :";
             // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(6, 71);
+            this.lblGrade.Location = new System.Drawing.Point(5, 57);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(92, 32);
+            this.lblGrade.Size = new System.Drawing.Size(77, 27);
             this.lblGrade.TabIndex = 9;
             this.lblGrade.Text = "Grade :";
             // 
             // lblDateEmbauche
             // 
             this.lblDateEmbauche.AutoSize = true;
-            this.lblDateEmbauche.Location = new System.Drawing.Point(6, 196);
+            this.lblDateEmbauche.Location = new System.Drawing.Point(5, 157);
             this.lblDateEmbauche.Name = "lblDateEmbauche";
-            this.lblDateEmbauche.Size = new System.Drawing.Size(191, 32);
+            this.lblDateEmbauche.Size = new System.Drawing.Size(163, 27);
             this.lblDateEmbauche.TabIndex = 7;
             this.lblDateEmbauche.Text = "Date embauche :";
             // 
@@ -259,9 +274,10 @@
             this.rdbPro.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.rdbPro.AutoSize = true;
             this.rdbPro.Enabled = false;
-            this.rdbPro.Location = new System.Drawing.Point(497, 192);
+            this.rdbPro.Location = new System.Drawing.Point(442, 154);
+            this.rdbPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbPro.Name = "rdbPro";
-            this.rdbPro.Size = new System.Drawing.Size(181, 36);
+            this.rdbPro.Size = new System.Drawing.Size(156, 31);
             this.rdbPro.TabIndex = 6;
             this.rdbPro.TabStop = true;
             this.rdbPro.Text = "Professionnel";
@@ -273,9 +289,10 @@
             this.rdbVolontaire.AutoCheck = false;
             this.rdbVolontaire.AutoSize = true;
             this.rdbVolontaire.Enabled = false;
-            this.rdbVolontaire.Location = new System.Drawing.Point(497, 238);
+            this.rdbVolontaire.Location = new System.Drawing.Point(442, 190);
+            this.rdbVolontaire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbVolontaire.Name = "rdbVolontaire";
-            this.rdbVolontaire.Size = new System.Drawing.Size(149, 36);
+            this.rdbVolontaire.Size = new System.Drawing.Size(128, 31);
             this.rdbVolontaire.TabIndex = 5;
             this.rdbVolontaire.TabStop = true;
             this.rdbVolontaire.Text = "Volontaire";
@@ -284,36 +301,36 @@
             // lblDateDeNaissance
             // 
             this.lblDateDeNaissance.AutoSize = true;
-            this.lblDateDeNaissance.Location = new System.Drawing.Point(263, 109);
+            this.lblDateDeNaissance.Location = new System.Drawing.Point(234, 87);
             this.lblDateDeNaissance.Name = "lblDateDeNaissance";
-            this.lblDateDeNaissance.Size = new System.Drawing.Size(216, 32);
+            this.lblDateDeNaissance.Size = new System.Drawing.Size(184, 27);
             this.lblDateDeNaissance.TabIndex = 4;
             this.lblDateDeNaissance.Text = "Date de naissance :";
             // 
             // lblSexe
             // 
             this.lblSexe.AutoSize = true;
-            this.lblSexe.Location = new System.Drawing.Point(6, 109);
+            this.lblSexe.Location = new System.Drawing.Point(5, 87);
             this.lblSexe.Name = "lblSexe";
-            this.lblSexe.Size = new System.Drawing.Size(75, 32);
+            this.lblSexe.Size = new System.Drawing.Size(62, 27);
             this.lblSexe.TabIndex = 3;
             this.lblSexe.Text = "Sexe :";
             // 
             // lblPrenom
             // 
             this.lblPrenom.AutoSize = true;
-            this.lblPrenom.Location = new System.Drawing.Point(263, 31);
+            this.lblPrenom.Location = new System.Drawing.Point(234, 25);
             this.lblPrenom.Name = "lblPrenom";
-            this.lblPrenom.Size = new System.Drawing.Size(109, 32);
+            this.lblPrenom.Size = new System.Drawing.Size(93, 27);
             this.lblPrenom.TabIndex = 2;
             this.lblPrenom.Text = "Prénom :";
             // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(6, 31);
+            this.lblNom.Location = new System.Drawing.Point(5, 25);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(79, 32);
+            this.lblNom.Size = new System.Drawing.Size(68, 27);
             this.lblNom.TabIndex = 1;
             this.lblNom.Text = "Nom :";
             // 
@@ -322,18 +339,19 @@
             this.lblMatricule.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMatricule.AutoSize = true;
             this.lblMatricule.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMatricule.Location = new System.Drawing.Point(489, 31);
+            this.lblMatricule.Location = new System.Drawing.Point(566, 25);
             this.lblMatricule.Name = "lblMatricule";
-            this.lblMatricule.Size = new System.Drawing.Size(137, 32);
+            this.lblMatricule.Size = new System.Drawing.Size(116, 27);
             this.lblMatricule.TabIndex = 0;
             this.lblMatricule.Text = "Matricule X";
             // 
             // cmbGrade
             // 
             this.cmbGrade.FormattingEnabled = true;
-            this.cmbGrade.Location = new System.Drawing.Point(672, 117);
+            this.cmbGrade.Location = new System.Drawing.Point(597, 95);
+            this.cmbGrade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGrade.Name = "cmbGrade";
-            this.cmbGrade.Size = new System.Drawing.Size(486, 40);
+            this.cmbGrade.Size = new System.Drawing.Size(432, 35);
             this.cmbGrade.TabIndex = 13;
             this.cmbGrade.SelectedIndexChanged += new System.EventHandler(this.cmbGrade_SelectedIndexChanged);
             this.cmbGrade.Leave += new System.EventHandler(this.cmbGrade_Leave);
@@ -351,9 +369,11 @@
             this.grpInformationPlus.Controls.Add(this.cmbCaserneRattachement);
             this.grpInformationPlus.Controls.Add(this.lblRattachement);
             this.grpInformationPlus.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformationPlus.Location = new System.Drawing.Point(436, 475);
+            this.grpInformationPlus.Location = new System.Drawing.Point(612, 384);
+            this.grpInformationPlus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpInformationPlus.Name = "grpInformationPlus";
-            this.grpInformationPlus.Size = new System.Drawing.Size(1169, 569);
+            this.grpInformationPlus.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpInformationPlus.Size = new System.Drawing.Size(1300, 574);
             this.grpInformationPlus.TabIndex = 2;
             this.grpInformationPlus.TabStop = false;
             this.grpInformationPlus.Text = "Informations Carrière";
@@ -362,10 +382,10 @@
             // chkConge
             // 
             this.chkConge.AutoSize = true;
-            this.chkConge.Location = new System.Drawing.Point(1017, 202);
-            this.chkConge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkConge.Location = new System.Drawing.Point(1056, 46);
+            this.chkConge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkConge.Name = "chkConge";
-            this.chkConge.Size = new System.Drawing.Size(137, 36);
+            this.chkConge.Size = new System.Drawing.Size(116, 31);
             this.chkConge.TabIndex = 22;
             this.chkConge.Text = "En congé";
             this.chkConge.UseVisualStyleBackColor = true;
@@ -375,20 +395,21 @@
             // lblGrade2
             // 
             this.lblGrade2.AutoSize = true;
-            this.lblGrade2.Location = new System.Drawing.Point(6, 91);
+            this.lblGrade2.Location = new System.Drawing.Point(5, 73);
             this.lblGrade2.Name = "lblGrade2";
-            this.lblGrade2.Size = new System.Drawing.Size(92, 32);
+            this.lblGrade2.Size = new System.Drawing.Size(77, 27);
             this.lblGrade2.TabIndex = 21;
             this.lblGrade2.Text = "Grade :";
             // 
             // btnMoins
             // 
-            this.btnMoins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(53)))), ((int)(((byte)(89)))));
+            this.btnMoins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(240)))), ((int)(((byte)(227)))));
             this.btnMoins.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
-            this.btnMoins.Location = new System.Drawing.Point(879, 508);
+            this.btnMoins.ForeColor = System.Drawing.Color.Black;
+            this.btnMoins.Location = new System.Drawing.Point(1045, 496);
+            this.btnMoins.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMoins.Name = "btnMoins";
-            this.btnMoins.Size = new System.Drawing.Size(279, 50);
+            this.btnMoins.Size = new System.Drawing.Size(248, 40);
             this.btnMoins.TabIndex = 20;
             this.btnMoins.Text = "Moins d\'informations";
             this.btnMoins.UseVisualStyleBackColor = false;
@@ -397,19 +418,20 @@
             // lstbAffectations
             // 
             this.lstbAffectations.FormattingEnabled = true;
-            this.lstbAffectations.ItemHeight = 32;
-            this.lstbAffectations.Location = new System.Drawing.Point(12, 371);
+            this.lstbAffectations.ItemHeight = 27;
+            this.lstbAffectations.Location = new System.Drawing.Point(6, 397);
+            this.lstbAffectations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstbAffectations.Name = "lstbAffectations";
-            this.lstbAffectations.Size = new System.Drawing.Size(787, 164);
+            this.lstbAffectations.Size = new System.Drawing.Size(700, 139);
             this.lstbAffectations.Sorted = true;
             this.lstbAffectations.TabIndex = 18;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 336);
+            this.label15.Location = new System.Drawing.Point(0, 369);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(228, 32);
+            this.label15.Size = new System.Drawing.Size(196, 27);
             this.label15.TabIndex = 17;
             this.label15.Text = "Affectations passées";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -417,18 +439,19 @@
             // lstbHabilitations
             // 
             this.lstbHabilitations.FormattingEnabled = true;
-            this.lstbHabilitations.ItemHeight = 32;
-            this.lstbHabilitations.Location = new System.Drawing.Point(12, 169);
+            this.lstbHabilitations.ItemHeight = 27;
+            this.lstbHabilitations.Location = new System.Drawing.Point(6, 166);
+            this.lstbHabilitations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstbHabilitations.Name = "lstbHabilitations";
-            this.lstbHabilitations.Size = new System.Drawing.Size(787, 164);
+            this.lstbHabilitations.Size = new System.Drawing.Size(700, 139);
             this.lstbHabilitations.TabIndex = 16;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 134);
+            this.label14.Location = new System.Drawing.Point(0, 138);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 32);
+            this.label14.Size = new System.Drawing.Size(130, 27);
             this.label14.TabIndex = 15;
             this.label14.Text = "Habilitations";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -436,9 +459,10 @@
             // cmbCaserneRattachement
             // 
             this.cmbCaserneRattachement.FormattingEnabled = true;
-            this.cmbCaserneRattachement.Location = new System.Drawing.Point(672, 58);
+            this.cmbCaserneRattachement.Location = new System.Drawing.Point(597, 46);
+            this.cmbCaserneRattachement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCaserneRattachement.Name = "cmbCaserneRattachement";
-            this.cmbCaserneRattachement.Size = new System.Drawing.Size(486, 40);
+            this.cmbCaserneRattachement.Size = new System.Drawing.Size(432, 35);
             this.cmbCaserneRattachement.TabIndex = 14;
             this.cmbCaserneRattachement.SelectedIndexChanged += new System.EventHandler(this.cmbCaserneRattachement_SelectedIndexChanged);
             this.cmbCaserneRattachement.Leave += new System.EventHandler(this.cmbCaserneRattachement_Leave);
@@ -446,35 +470,46 @@
             // lblRattachement
             // 
             this.lblRattachement.AutoSize = true;
-            this.lblRattachement.Location = new System.Drawing.Point(6, 48);
+            this.lblRattachement.Location = new System.Drawing.Point(5, 38);
             this.lblRattachement.Name = "lblRattachement";
-            this.lblRattachement.Size = new System.Drawing.Size(289, 32);
+            this.lblRattachement.Size = new System.Drawing.Size(246, 27);
             this.lblRattachement.TabIndex = 14;
             this.lblRattachement.Text = "Caserne de rattachement :";
             // 
             // btnPlus
             // 
-            this.btnPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(53)))), ((int)(((byte)(89)))));
+            this.btnPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(240)))), ((int)(((byte)(227)))));
             this.btnPlus.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
-            this.btnPlus.Location = new System.Drawing.Point(1319, 426);
+            this.btnPlus.ForeColor = System.Drawing.Color.Black;
+            this.btnPlus.Location = new System.Drawing.Point(1668, 344);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(275, 50);
+            this.btnPlus.Size = new System.Drawing.Size(244, 40);
             this.btnPlus.TabIndex = 19;
             this.btnPlus.Text = "Plus d\'informations";
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Visible = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
+            // userControl21
+            // 
+            this.userControl21.Location = new System.Drawing.Point(0, 0);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(227, 1000);
+            this.userControl21.TabIndex = 20;
+            // 
             // frmGestionDesPompiers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1615, 1061);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(206)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(1924, 962);
+            this.Controls.Add(this.userControl21);
             this.Controls.Add(this.grpInformationPlus);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.grpInformations);
             this.Controls.Add(this.grpSelectCasernePompier);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestionDesPompiers";
             this.Text = "Gestion Des Pompiers";
             this.Load += new System.EventHandler(this.frmGestionDesPompiers_Load);
@@ -529,6 +564,7 @@
         private System.Windows.Forms.Button btnConnexion;
         private System.Windows.Forms.CheckBox chkConge;
         private System.Windows.Forms.Button button2;
+        private User_Control_Missions_TDB.UserControl2 userControl21;
     }
 }
 
