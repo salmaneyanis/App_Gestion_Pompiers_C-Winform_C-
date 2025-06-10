@@ -71,7 +71,7 @@ namespace User_Control_Missions_TDB
 
         private void btn_personnel_Click(object sender, EventArgs e)
         {
-
+            AfficherFormulaire("personnel", () => new SEAA21_Form4.frmGestionDesPompiers());
         }
 
         private void btn_dash_Click(object sender, EventArgs e)
@@ -109,6 +109,11 @@ namespace User_Control_Missions_TDB
             {
                 _formulaires[nom].Show();
             }
+        }
+
+        private void btn_stats_Click(object sender, EventArgs e)
+        {
+            AfficherFormulaire("stats", () => new SAEA21_Form5_StatRegu.FrmStatistiques());
         }
     }
 }

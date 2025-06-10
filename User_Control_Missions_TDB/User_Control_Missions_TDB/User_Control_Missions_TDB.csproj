@@ -104,8 +104,14 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SAEA21-Form5-StatRegu">
+      <HintPath>..\..\SAEA21-Form5-StatRegu\SAEA21-Form5-StatRegu\bin\Debug\SAEA21-Form5-StatRegu.exe</HintPath>
+    </Reference>
     <Reference Include="SAE_POMPIER_A21">
       <HintPath>..\..\SAE_POMPIER_A21\SAE_POMPIER_A21\bin\Debug\SAE_POMPIER_A21.exe</HintPath>
+    </Reference>
+    <Reference Include="SEAA21-Form4">
+      <HintPath>..\..\SEAA21-Form4\SEAA21-Form4\bin\Debug\SEAA21-Form4.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">

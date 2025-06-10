@@ -144,6 +144,7 @@
             this.btn_stats.Text = "Statistiques";
             this.btn_stats.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_stats.UseVisualStyleBackColor = false;
+            this.btn_stats.Click += new System.EventHandler(this.btn_stats_Click);
             // 
             // pic
             // 
