@@ -295,7 +295,7 @@ namespace SEAA21_Form4
             formMDP.ShowDialog();
             if (formMDP.DialogResult == DialogResult.OK)
             {
-                if (formMDP.Nom == "admin" && formMDP.Mdp == "admin")
+                if ((formMDP.Nom == "vrichard" && formMDP.Mdp == "mdpVero") || (formMDP.Nom == "hlhelguen" && formMDP.Mdp == "mdpHerve"))
                 {
                     passerEnAdmin();
                     MessageBox.Show("Connexion réussie !");

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionDesPompiers));
             this.grpSelectCasernePompier = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnNouveau = new System.Windows.Forms.Button();
             this.cmbPompier = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +76,6 @@
             // grpSelectCasernePompier
             // 
             this.grpSelectCasernePompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(30)))), ((int)(((byte)(228)))));
-            this.grpSelectCasernePompier.Controls.Add(this.button2);
             this.grpSelectCasernePompier.Controls.Add(this.btnNouveau);
             this.grpSelectCasernePompier.Controls.Add(this.cmbPompier);
             this.grpSelectCasernePompier.Controls.Add(this.label2);
@@ -92,17 +90,6 @@
             this.grpSelectCasernePompier.Size = new System.Drawing.Size(373, 947);
             this.grpSelectCasernePompier.TabIndex = 0;
             this.grpSelectCasernePompier.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(18, 785);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 30);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnNouveau
             // 
@@ -582,7 +569,6 @@
         private System.Windows.Forms.Label lblGrade2;
         private System.Windows.Forms.Button btnConnexion;
         private System.Windows.Forms.CheckBox chkConge;
-        private System.Windows.Forms.Button button2;
         private User_Control_Missions_TDB.UserControl2 userControl21;
         private System.Windows.Forms.Label label3;
     }
