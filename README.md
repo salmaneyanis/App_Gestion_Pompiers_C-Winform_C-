@@ -109,6 +109,3 @@ Its clean and intuitive interface makes it easy to follow operations in real tim
 5. Start the application with **F5**
 
 ---
-
-✅ Structurer en sections plus “corporate” pour un dossier de stage
-👌 Tu veux une version avec plus de design (emojis / moins d’emojis) ?
